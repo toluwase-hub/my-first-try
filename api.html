@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+/* --- General page styling --- */
+ body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* --- Container for the cards --- */
+ #userList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+} 
+
+/* --- Card styling --- */
+ .table {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  line-height: 1.6;
+} 
+
+/* --- Hover effect --- */
+ .table:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+} 
+
+/* --- Text formatting --- */
+ .table strong {
+  font-size: 1.2em;
+  color: #007bff;
+  display: block;
+  margin-bottom: 8px;
+}
+.table .name{
+    color: tomato;
+}
+
+.table span {
+  display: block;
+  margin: 4px 0;
+  color: #555;
+} 
+    </style>
+</head>
+<body>
+
+    <!-- api get post put delect -->
+
+    <h1>User List</h1>
+    
+    <ul id="userList"></ul>
+    
+
+
+
+
+    <script src="./api.js"></script>
+</body>
+</html>

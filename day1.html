@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day1</title>
+    <style>
+      #countlabel{
+        display: block;
+        text-align: center;
+        font-size: 10em;
+      }  
+      #btncontainer{
+        text-align: center;
+      }
+      .button{
+        padding: 10px 20px;
+        font-size: 1.5em;
+        color: white;
+        background-color: rgb(140, 140, 231);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.25s;
+      }
+      .button:hover{
+        background-color: rgb(61, 61, 220);
+      }
+
+      #myButton{
+        font-size: 3em;
+        padding: 5px 25px;
+        border-radius: 5px;
+      }
+      .myLabels{
+        font-size: 3em;
+      }
+      center{
+        text-align: center;
+      }
+      #mySubmit{
+        font-size: 1em;
+
+      }
+       #guess{
+            padding:15px;
+            border: none;
+            outline: none;
+            transition: 1s;
+            border-radius: 4px;
+            box-shadow: 5px 5px 8px #00000002 , -5px -5px 5px #ffffff;
+            background-color: rgb(129, 209, 10);
+            color: #ffffff;
+        }
+        #guess:hover{
+            scale: 1.1;
+          
+        }
+        .whole{
+           
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 12px 12px 20px #cbced1, -12px -12px 20px #ffffff;
+            max-width: 500px;
+            margin: auto;
+        }
+                #guessinput{
+          width: 93.5%;  
+          outline: none;
+          border: none;
+           padding: 15px;
+          border-radius: 6px;
+          margin-bottom: 30px;
+          color: black;
+          box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+        }
+        #message{
+          font-size: 30px;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          color: rgb(97, 158, 6);
+        }
+        #result{
+         font-size: 30px;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          color: rgb(97, 158, 6); 
+        }
+        .num{
+          color: rgb(102, 163, 12);
+        }
+        
+    </style>
+  </head>
+  <body>
+     <!-- <h1 id="myH1"></h1>
+    <p id="myP"></p> --> 
+
+    <!-- <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p> -->
+
+    <!-- <h1 id="myh1">welcome</h1>
+
+    <input type="text" id="mytext" placeholder="username"><br>
+    <button id="mysubmit">submit</button> -->
+
+    <!-- <h1 id="myH1">Enter the radius of a circle</h1><br>
+    <input type="text" id="mytext" placeholder="radius"><br>
+    <button id="mysubmit">submit</button>
+    <h3 id="myH3"></h3> -->
+
+    <!-- <label id="countlabel">0</label><br /> 
+
+    <div id="btncontainer">
+      <button id="decreaseBtn" class="button">decrease</button>
+      <button id="resetBtn" class="button">reset</button>
+
+
+
+      <button id="increaseBtn" class="button">increase</button>
+    </div> -->
+
+    <!-- bulb -->
+
+    <center>
+      <h1>Bulb on/off</h1>
+       <img id="bulb" src="./light on.png" alt="" width="200px" height="180px">
+    <br><br>
+
+    <button onclick="document.getElementById('bulb').src='bulboff.png'">Turn Off</button>
+    <button onclick="document.getElementById('bulb').src='light on.png'">Tunr On</button>
+    </center>
+
+<center>
+<div class="whole">
+  <h2 class="num">Number Guessing Game</h2>
+      <p id="message">?</p>
+      <input type="text" id="guessinput" placeholder="guess num between 1-100"><br>
+      <button id="guess">Guess</button>
+      <p id="result">Guess</p>
+    </div>
+</center>
+    
+     
+
+
+    <!-- <button id="myButton">Roll</button><br>
+    <label for="" id="Label1" class="myLabels"></label><br>
+    <label for="" id="Label2"  class="myLabels"></label><br>
+    <label for="" id="Label3"  class="myLabels"></label><br>
+
+
+    <label for="" >Enter your age</label><br>
+    <input type="text" id="mytext"><br>
+    <button type="submit" onclick="mysubmit()">submit</button>
+    <p id="result"></p>
+
+
+
+    <input type="checkbox" id="mycheckbox">
+    <label for="mycheckbox">subscribe</label> <br><br>
+
+    <input type="radio" id="visaBtn" name="card">
+    <label for="visaBtn">Visa</label><br>
+    <input type="radio" id="masterCardBtn"  name="card">
+    <label for="masterCardBtn">masterCard</label><br>
+    <input type="radio" id="paypalBtn"  name="card">
+    <label for="paypalBtn">paypal</label><br><br>
+
+    <button type="submit" id="mySubmit">submit</button>
+    <p id="subResult"></p>
+    <p id="paymentResult"></p> -->
+    
+
+    <script src="./day1.js"></script> 
+  </body>
+</html> 

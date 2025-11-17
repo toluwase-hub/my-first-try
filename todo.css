@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./IMG_0490.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    padding: 0 20px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(225, 225, 225, 0.18);
+    backdrop-filter: blur(10px);
+}
+.todo-app h1{
+    font-family: 2rem;
+    text-align: center;
+}
+.input-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.input-area input{
+    flex: 1;
+    padding: 10px 17px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    background: rgba(225, 294, 200, 0.3);
+    color: #dbdbdb;
+}
+.input-area input:focus{
+   background: rgba(225, 294, 200, 0.3);
+    color: #dbdbdb;  
+}
+.input-area input::placeholder{
+    color: #bcbcbc;
+}
+.input-area button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.1rem;
+    background: rgba(225, 294, 200, 0.3);
+    border: 2px solid rgba(225, 225, 225, 0.18);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.input-area button:hover{
+    transform: scale(1.1);
+    background: #ff6f91;
+}
+.todos-container{
+    display: flex;
+    max-height: 200px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-top: 25px;
+    scrollbar-width: none;
+    
+}
+#task-list{
+    width: 100%;
+}
+#task-list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(225, 194, 209, 0.3);
+    margin-bottom: 10px;
+    margin-top: px;
+    padding: 8px 10px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: white;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+}
+#task-list li:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#task-list li input{
+    min-width: 20px;
+    max-width: 20px;
+    border: 2px solid rgba(225, 225, 225, 0.3);
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+#task-list li .checkbox:checked{
+    background: #ff6f91;
+    transform: scale(1.1);
+}
+#task-list li span{
+    flex: 1;
+    margin-left: 10px;
+    word-wrap: break-word;
+}
+.Task-buttons{
+    display: flex;
+    gap: 10px;
+    margin-right: auto;
+}
+.Task-buttons button{
+    background: rgba(225, 194, 209, 0.3);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all  0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Task-buttons button:hover{
+    transform: scale(1.2);
+}
+.Task-buttons .edit-btn{
+    background: rgb(21, 196, 21);
+}
+.Task-buttons .delete-btn{
+    background: rgb(254, 18, 18);
+}

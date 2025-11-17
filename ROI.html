@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            max-width: 700px;
+            background-color: green;
+             padding: 30px 70px 30px 70px;
+            border-radius: 20px;
+            box-shadow: 12px 12px 30px #cbced1, -12px -12px 30px #ffffff;
+            text-align: center;
+            position: relative;
+        }
+         input{
+            border: 1px solid rgb(209, 202, 202);
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 90%;
+            outline: none;
+            margin-left: auto;
+        }
+        .container input:focus{
+            border-color: rgb(255, 100, 100);
+            box-shadow: 0px 1px 5px red;
+        }
+        #showoption{
+            background: transparent;
+            border: none;
+            color: black;
+            position: absolute;
+            border-top-right-radius: 10px ;
+            border-bottom-right-radius: 10px;
+            top: 10px;
+            right: -1px;
+            border-left: 1px solid black;
+            height: 38px;
+        }
+        #showoption:hover{
+            background-color: red ;
+            color: white;
+            box-shadow: inset  5px 5px 8px rgb(138, 8, 8), inset -5px -5px 8px rgb(185, 17, 17); 
+        }
+        .con{
+            position: relative;
+            width: 100%;
+        }
+        #option{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background-color: black;
+            display: none;
+            position: absolute;
+            right: 0px;
+            bottom: 30px;
+            border-radius: 10px;
+            padding: 10px 20px 10px 20px;
+        }
+        #option button{
+            background: transparent;
+            border: none;
+            color: #dfd9d9;
+        }
+         #option button:hover{
+            background-color: red;
+         }
+        #calculateInvest{
+            background-color: rgb(228, 23, 23);
+            border: none;
+            padding: 20px 20px 20px 20px;
+            border-radius: 10px;
+            width: 90%;
+            color: white;
+            box-shadow: inset  5px 5px 8px rgb(249, 2, 2), inset -5px -5px 8px rgb(180, 3, 3);
+        }
+        #calculateInvest:hover{
+           box-shadow: inset  5px 5px 8px rgb(138, 8, 8), inset -5px -5px 8px rgb(185, 17, 17); 
+        }
+        #resultInvest{
+            margin-top: 20px;
+            font-size: 25px;
+            color: white    ;
+        }
+        #anual{
+            margin-top: 20px;
+            font-size: 25px;
+            color: white    ;
+        }
+        #totalin{
+            margin-top: 20px;
+            font-size: 25px;
+            color: white    ;
+        }
+        h2{
+            color: red;
+            text-shadow:  5px 5px 8px rgb(138, 8, 8),  -5px -5px 8px rgb(185, 17, 17); 
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="container" >
+        <h2>R.O.I Calculator</h2>
+
+        <input type="text" id="initial-invest" placeholder="Enter Amount"> <br>
+        <input type="text" id="gain-invest" placeholder="Increase rate"> <br>
+        <div class="con">
+        <input type="text" id="period-invest" placeholder="Duration-Min-1 Year">
+        <button id="showoption">»</button>
+       
+        <ul id="option">
+            <button onclick="addtoYear('1')">1 year</button>
+            <button onclick="addtoYear('2')">2 years</button>
+            <button onclick="addtoYear('3')">3 years</button>
+            <button onclick="addtoYear('4')">4 years</button>
+        </ul>
+         </div> <br>
+        <button id="calculateInvest">Calculate</button> <br>
+        <div id="resultInvest">Payback: 0</div>
+        <p id="anual">Annual Interest:0</p>
+        <p id="totalin">Total Interest:0</p>
+
+
+    </div>
+    
+
+
+
+    <script src="ROI.js"></script>
+</body>
+</html>

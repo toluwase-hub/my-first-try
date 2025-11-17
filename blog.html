@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #f9f9f9;
+        padding: 30px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .post {
+        background-color: white;
+        margin-bottom: 10px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .post:hover {
+        background-color: #f0f0f0;
+      }
+      #loadMore {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Blog viewer app</h1>
+
+    <div id="postContainer"></div>
+    <button id="loadMore">Load More</button>
+
+    <script src="./blog.js"></script>
+  </body>
+</html>

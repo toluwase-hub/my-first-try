@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        display: flex;
+        gap: 40px;
+        margin: 30px;
+      }
+      .product-list, .cart{
+        width: 45%;
+      }
+      .Product, .cart-item{
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
+      img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+      button{
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      button:hover{
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    
+
+    <div class="product-list">
+        <h2>Product page</h2>
+
+    <div class="Product"  data-id="1" data-name="Product1" data-price="1000">
+      <img src="./image 2.png" alt="" />
+      <h3>Product 1</h3>
+      <p>Price:1000</p>
+      <button class="add-to-cart">Add to cart</button>
+    </div>
+
+    <div class="Product" data-id="2" data-name="Product2" data-price="2000">
+      <img src="./image 4.png" alt="" />
+      <h3>Product 2</h3>
+      <p>Price:2000</p>
+      <button class="add-to-cart">Add to cart</button>
+    </div>
+
+    <div class="Product"  data-id="3" data-name="Product3" data-price="1500">
+      <img src="./image 7.png" alt="" />
+      <h3>Product 3</h3>
+      <p>Price:1500</p>
+      <button class="add-to-cart">Add to cart</button>
+    </div>
+
+    </div>
+    
+    <div class="cart">
+        <h2>Carts</h2>
+        <div id="cart-items"></div>
+        <h3>Total: $<span id="cart-total">0</span></h3>
+    </div>
+
+    
+
+    <script src="productpage.js"></script>
+  </body>
+</html>

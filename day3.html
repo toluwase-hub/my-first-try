@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+<script>
+//  array in js
+
+// let fruits =["apple", "orange","banana"];
+// fruits[3] ="coconut";
+// console.log(fruits[3]);
+
+// let fruits =["apple", "orange","banana"];
+// fruits.push("coconut") this will add to the end of the array
+// fruits.pop(); this will remove the list item from the array
+
+// fruits.unshift("mango") this will add Element to the end of the Array
+// fruits.shift(); this will remove an item from the begining of the array
+// console.log(fruits.length);
+// or
+// let numOffruits = fruits.length;
+// console.log(numOffruits)
+// let index = fruits.indexOf("apple")
+
+// for(let i = 0; i < fruits.length; i++){
+// console.log((fruits[i]))
+// }
+
+// for(let i = fruits.length - 1; i >= 0 ; i--){
+//     console.log(fruits[i])
+// }
+
+// for(let fruit of fruits){
+//     console.log(fruit)
+// }
+// to arrange alphabetically
+// fruits.sort();
+// console.log(fruits)
+
+// fruits.sort().reverse();
+// console.log(fruits)
+
+// spread operator in javascript =
+//  ... allows iterable such as an array to expand into seperate element
+
+
+// let numbers = [1, 2, 3, 4, 5];
+
+// let max = Math.max(...numbers);
+// let min = Math.min(...numbers);
+// console.log(max);
+// console.log(min);
+
+// let username = "tolu wase";
+// let letters = [...username].join("");
+// console.log(letters)
+
+// let fruits = ["apple", "orange", "banana"];
+// let vegetable = ["carrots", "calery", "patatoes"];
+// let foods = [...fruits, ...vegetable, "egg", "milk"]
+// let newfruits = [...fruits]
+// console.log(newfruits);
+// console.log(foods)
+
+// rest paremeter in js = (...rest) it an opposite of spread operator
+// function openfridge(...foods){
+//  console.log(...foods);
+// }
+// function getfood(...foods){
+//     return foods;
+// }
+
+// const food1 = "pizza";
+// const food12= "hamburger";
+// const food3 = "hotdog";
+// const food4 = "sushi";
+// // openfridge(food1, food12, food3, food4)
+
+// const foods = getfood(food1, food12 ,food3, foods);
+// console.log(foods);
+
+
+// random password generator
+
+function generatePassword(length, includelowercase, includeuppercase, includenumbers){
+    const lowercaseChars = "abcdefghijklnmopqrstuvwxyz";
+    const uppercaseChars = "ABCDEFGHIJKLNMOPQRSTUVWXYZ";
+    const numberschars = "0123456789";
+    const symbolChars = "!@#$%^&*()_+-";
+
+    let allowedChars = "";
+    let password = "";
+
+    allowedChars += includelowercase ? lowercaseChars : "";
+    return "";
+}
+
+const passwordLenght = 12;
+const includelowercase = true;
+const includeuppercase = true;
+const includenumbers = true;
+const includesymbols = true;
+const password = generatePassword(passwordLenght, includelowercase, includeuppercase, includenumbers, includesymbols);
+console.log(`generated password : ${password}`)
+
+
+
+
+</script>
+</body>
+</html>

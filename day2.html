@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<style>
+  body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: hsl(0, 0%, 93%);
+  }
+  h1{
+    color: hsl(248, 95%, 69%);
+  }
+  form{
+     background-color: hsl(0, 0%, 100%);
+     text-align: center;
+     max-width: 350px;
+     margin: auto;
+     padding: 25px;
+     border-radius: 10px;
+     box-shadow: 5px 5px 15px hsl(0, 0%, 44%);
+  }
+  #textBox{
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid hsla(0, 0%, 0%, 0.2);
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+  }
+  label{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  button{
+    margin-top: 15px;
+    background-color: hsla(0, 94%, 50%, 0.756);
+    font-size: 1.5em;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: #920a0ad5;
+  }
+  #result{
+    font-size: 1.7em;
+    font-weight: bold;
+  }
+  
+</style>
+  </head>
+  <!-- <ul id="tolu"></ul>
+
+  <div id="display"></div>
+  <button onclick="add()">count</button> -->
+
+  <form action="">
+    <h1>Temperature conversion</h1>
+    <input type="number" id="textBox"  value="0"> <br>
+    <input type="radio" id="tofahrenhelt" name="unit">
+    <label for="tofahrenhelt">Celsius ➡️ fahrenhelt</label> <br>
+
+        <input type="radio" id="tocelsius" name="unit">
+    <label for="tocelsius">fahrenhelt ➡️ Celsius  </label> <br>
+
+
+    <button type="button" onclick="convert()">Submit</button>
+    <p id="result"></p>
+  </form>
+
+
+
+  <body>
+    <script>
+      // String slicing
+
+      // const fullname = "olaniyi tolu";
+      // let firstname = fullname.slice(0, 7);
+      // let lastnamr = fullname.slice(7 );
+      // let firstchild = fullname.slice(0, 1);
+      // let lastchild = fullname.slice( -1);
+      // console.log(firstname);
+      // console.log(lastnamr)
+      // console.log(firstchild);
+      // console.log(lastchild)
+
+      // method chaining
+
+      // let username = window.prompt("enter your username");
+      // username = username.trim();
+      // let letter = username.charAt(0);
+      // letter = letter.toLocaleUpperCase();
+
+      // let extrachars = username.slice(1);
+      // extrachars = extrachars.toLocaleLowerCase();
+      // username = letter + extrachars;
+
+      // console.log(username)
+
+      // logical operators and:if two condition are true,
+      //  or:if at least one condition is true  not: opposite of the boolean
+
+      // const temp = 12;
+
+      // if(temp <= 0 || temp > 30){
+      //     console.log(`the weather is bad`)
+      // } else {
+      //     console.log(`the weather is good`)
+      // }
+
+      // const isSunny = false;
+
+      // if(!isSunny){
+      //     console.log("it is cloudy")
+      // }
+      // else{
+      //     console.log("it is sunny")
+      // }
+
+      //= assignment operator
+      //  == conparism operation
+      // === strict equality operator this will compare the data type and the value
+      //  != not equal to
+      //  !== strict not equal to
+
+      // const PI = 3.14;
+
+      // if( PI === "3.14"){
+      //     console.log("that is pi")
+      // }
+      // else{
+      //     console.log("that is not pi")
+      // }
+      // if( PI !== "3.14"){
+      //     console.log("that is not pi")
+      // }
+      // else{
+      //     console.log("that is  pi")
+      // }
+
+      // while loop: repeat some code while some condition is true
+      //  let username = " "
+      //   if(username === " "){
+      //     console.log("you did not enter your username")
+      //   } else {
+      //     console.log(`hello ${username}`)
+      //   }
+
+      // using while loop
+
+      // let username = "";
+      //   while(username === "" || username === null){
+      //     username = window.prompt("enter your name");
+      //   }
+      //     console.log(`hello ${username}`);
+      // using do while loop
+      // let username;
+      //  do{
+      //     username = window.prompt("enter your name");
+      //   }while(username === "" || username === null)
+      //     console.log(`hello ${username}`);
+      // while loop
+      // let loggedin = false;
+      // let username;
+      // let password;
+
+      // while(!loggedin){
+      //     username = window.prompt("enter your username");
+      //      password = window.prompt("enter your password");
+
+      //      if(username === "tolu" && password === "toluwase"){
+      //         loggedin =  true;
+      //         console.log("you are logged in!")
+      //      } else{
+      //         console.log("invalid detels please try again")
+      //      }
+      // }
+
+      // for loop repeat some code a limited amount of times
+
+      // for( let i = 1;  i <= 20; i++){
+
+      //     if(i % 2 === 0){
+      //         console.log( " even ")
+      //     }
+      //      else{
+
+      //     console.log(i)
+      //      }
+      // }
+
+      // numbers guessing game
+
+      // const minNum = 1;
+      // const maxNumn = 100;
+
+      // const answer = Math.floor(Math.random() * (maxNumn - minNum + 1) + minNum)
+      //   console.log(answer)
+
+      //   let attempts = 0;
+      //   let guess;
+      //   let runing = true;
+
+      //   while( runing){
+
+      //     guess = window.prompt(`guess a number between ${minNum} - ${maxNumn} `);
+      //     guess = Number(guess);
+
+      //     if(isNaN (guess)){
+      //         window.alert("please enter a number");
+      //     }
+      //     else if (guess < minNum || guess > maxNumn){
+      //          window.alert("please enter a valid  number");
+      //     }
+      //     else{
+      //         attempts++;
+
+      //          if(guess < answer){
+      //         window.alert("too low try again");
+      //     }
+      //     else if (guess > answer){
+      //         window.alert("too hight try again");
+      //     }
+      //     else{
+      //         window.alert(`correct!! ${answer}`)
+      //          runing = false;
+      //     }
+      //     }
+
+      //   }
+
+      // function in js is a section of reuseable code
+
+    //   function happybirthday(username , age) {
+    //     // this is a paremeter
+    //     console.log("happy birthday to you ");
+    //     console.log("happy birthday to you ");
+    //     console.log(`happy birthday dear ${username} `);
+    //     console.log("happy birthday to you ");
+    //     console.log(`you are ${age} years old `);
+    //   } 
+    //      happybirthday( "tolu", 20);
+    //      happybirthday("sponebob", 30);
+    //      happybirthday("patrick", 37);
+    // //  this is an argument
+
+        // return keyword
+
+        // function add(x, y){
+        //     let result = x + y;
+        //     return result;
+        // }
+        // let answer = add(2, 3);
+        // console.log(answer);
+
+        // function add(x, y){
+        //     return x + y;
+        // }
+
+        //  function sub(x, y){
+        //     return x - y;
+        // }
+
+        // function isEven(number){
+        //     // if(number % 2 === 0){
+        //     //     return true;
+        //     // }
+        //     // else{
+        //     //     return false;
+        //     // }
+
+        //     return number % 2 === 0 ? true : false
+        // }
+
+        // function isValid(email){
+        //     if(email.includes("@")){
+        //         return true;
+        //     }
+        //     else{
+        //         return false;
+        //     }
+        //     return email.includes ("@") ? true : false;
+        // }
+
+
+        // console.log(isValid("olanyiytoluwase@tolu.com"));
+
+
+    // function birth(name, age){
+    //  console.log(`happy birthday ${name} you are ${age} years old`)
+    // }
+    // birth("tolu", 20)
+
+    // function add(a, b){
+    //   console.log(a + b);
+    // }
+    // add(2, 4)
+
+    // function add(a, b){
+    //   return a + b;
+    // }
+    // console.log(add(2, 4))
+
+
+    // function module(num){
+      // if(num % 2 === 0){
+      //   return true;
+      // }
+      // else{
+      //   return false;
+      // }
+
+    //   return num % 2 === 0 ? true : false;
+    // }
+    // console.log(module(8))
+
+
+
+    // function valid(email){
+      // if(email.includes("@")){
+      //   return true;
+      // }
+      // else{
+      //   return false;
+      // }
+
+      // return email.includes("@") ? true : false;
+    // }
+    // console.log(valid("olanyi@tolu.com"))
+
+//     const tolu = document.getElementById("tolu");
+//     for(let i = 0; i <= 99; i++){
+//        const ola = document.createElement("li");
+//     ola.innerHTML = `${i + 1}`
+//     tolu.appendChild(ola);
+//     }
+
+//     const display = document.getElementById("display");
+//   function  add(){
+// let count;
+// for(let count = 0; count <= 15; count++ ){
+//   const me = document.createElement("p");
+//   me.innerHTML = `${count}`;
+//   display.appendChild(me);
+// }
+
+//     }
+
+
+// variable scope = where a variable is 
+// recognized and accessible (local and global)
+
+// local scope variable are declared inside a function
+
+// function2()
+// function1()
+
+// function function1(){
+//   let x = 1;
+//   console.log(x)
+// }
+
+// function function2(){
+//   let x = 2;
+//   console.log(x)
+// }
+
+// global variable are declare outside a function
+
+
+// let x = 3;
+
+// function1()
+// function2()
+
+// function function1(){
+//   let x = 1;
+//   console.log(x)
+// }
+
+// function function2(){
+//   let x = 2;
+//   console.log(x)
+// }
+
+// temperature conversion
+
+const textBox = document.getElementById("textBox");
+const tofahrenhelt =  document.getElementById("tofahrenhelt");
+const tocelsius =  document.getElementById("tocelsius");
+const result = document.getElementById("result");
+let temp;
+
+function convert(){
+
+  if(tofahrenhelt.checked){
+    temp = Number(textBox.value);
+    temp = temp * 9 / 5 + 32;
+    result.textContent = `${temp.toFixed(1)} ⁰F `
+  }
+  else if (tocelsius.checked){
+    temp = Number(textBox.value);
+    temp = (temp - 32) * (5 / 9);
+    result.textContent = `${temp.toFixed(1)} ⁰c `
+  }
+  else{
+    result.textContent = `select a unit`;
+  }
+}
+
+   
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

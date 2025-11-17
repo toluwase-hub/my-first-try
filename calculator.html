@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            color: white;
+        }
+        .calculator{
+            background-color:#333 ;
+            padding: 20px;
+            border-radius: 10px;
+            width: 260px;
+        }
+    #display{
+            width: 93%;
+            height: 50px;
+            text-align: right;
+            font-size: 24px;
+            padding: 10px;
+            border: none ;
+            background-color: #111;
+            color: #0f0;
+            margin-top: 18px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        
+        }
+        .buttons{
+            display: grid;
+            grid-template-columns: repeat(4 ,1fr);
+            gap: 10px;
+        }
+        button{
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #554;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #777;
+        }
+        .oparator{
+            background-color: #f39612;
+        }
+        .equal{
+            background-color: #e74c3c;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="display" disabled />
+      <div class="buttons">
+        <button class="clear" onclick="clearDisplay()">C</button>
+        <button onclick="deleteLast()">DLE</button>
+        <button onclick="appendtoDisplay('%')" class="oparator">%</button>
+        <button onclick="appendtoDisplay('/')" class="oparator">/</button>
+
+        <button onclick="appendtoDisplay('7')">7</button>
+        <button onclick="appendtoDisplay('8')">8</button>
+        <button onclick="appendtoDisplay('9')">9</button>
+        <button onclick="appendtoDisplay('*')" class="oparator">*</button>
+
+        <button onclick="appendtoDisplay('4')">4</button>
+        <button onclick="appendtoDisplay('5')">5</button>
+        <button onclick="appendtoDisplay('6')">6</button>
+        <button onclick="appendtoDisplay('-')" class="oparator">-</button>
+
+        <button onclick="appendtoDisplay('1')">1</button>
+        <button onclick="appendtoDisplay('2')">2</button>
+        <button onclick="appendtoDisplay('3')">3</button>
+        <button onclick="appendtoDisplay('+')" class="oparator">+</button>
+
+
+        <button onclick="appendtoDisplay('0')">0</button>
+        <button onclick="appendtoDisplay('.')">.</button>
+        <button onclick="calculateResult()" class="equal">=</button>
+
+      </div>
+    </div>
+
+    <script src="./calculator.js"></script>
+  </body>
+</html>

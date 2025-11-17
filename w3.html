@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="click">show time</button>
+    <h1 id="time"></h1>
+    <h1 id="time2"></h1>
+    <h1 id="time3"></h1>
+    
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        
+        const my = document.getElementById("click");
+        function showtime(){
+            document.getElementById('time').textContent = new Date().toLocaleTimeString();
+        }
+        my.addEventListener('click', showtime)
+
+        const mytime = new Date().toString();
+        document.getElementById('time').textContent = mytime;
+
+        const mtime = new Date().toISOString();
+        document.getElementById('time2').textContent = mtime;
+
+        const time3 = new Date().getTime();
+        document.getElementById('time3').textContent = time3;
+
+
+        // const book = {
+        //     title: "art of programming",
+        //     author: "dev tolu",
+        //     pages: 300,
+        // };
+        // const jsonbook = JSON.stringify(book);
+        // console.log(jsonbook)
+
+
+
+
+    </script>
+</body>
+</html>
